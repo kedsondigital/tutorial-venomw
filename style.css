@@ -129,6 +129,30 @@ html, body {
   opacity: 1;
 }
 
+.nav-item--soon {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.nav-item--soon:hover {
+  background: none;
+  color: var(--text-muted);
+}
+
+.nav-soon-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.soon-badge {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
 /* Content area */
 .content {
   flex: 1;
