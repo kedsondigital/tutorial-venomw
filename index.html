@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutoriais VenomW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span class="logo-icon">W</span>
+        <span class="logo-text">VenomW</span>
+      </div>
+      <p class="sidebar-label">Tutoriais</p>
+      <nav class="sidebar-nav">
+        <button class="nav-item" data-topic="telegram-id" onclick="showTopic(this)">
+          <span class="nav-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-5"/></svg>
+          </span>
+          Como pegar o ID do Telegram
+        </button>
+        <button class="nav-item" data-topic="telegram-bot" onclick="showTopic(this)">
+          <span class="nav-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-5"/></svg>
+          </span>
+          Como iniciar o bot do Telegram
+        </button>
+        <button class="nav-item" data-topic="bm-acesso" onclick="showTopic(this)">
+          <span class="nav-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-5"/></svg>
+          </span>
+          Compartilhamento de acesso
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+
+      <!-- Empty state -->
+      <div class="empty-state" id="empty-state">
+        <div class="empty-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3ce78c" stroke-width="1.5">
+            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="9" y1="13" x2="15" y2="13"/>
+            <line x1="9" y1="17" x2="12" y2="17"/>
+          </svg>
+        </div>
+        <h2 class="empty-title">Selecione um tutorial</h2>
+        <p class="empty-desc">Escolha um tópico no menu ao lado para começar.</p>
+      </div>
+
+      <!-- Topic panels -->
+      <div class="topic-panel" id="topic-telegram-id" style="display:none">
+        <div class="topic-header">
+          <span class="topic-tag">Telegram</span>
+          <h1 class="topic-title">Como pegar o ID do Telegram</h1>
+          <p class="topic-desc">Seu ID do Telegram é um número único necessário para vincular sua conta ao sistema. Siga o vídeo abaixo e copie o número informado.</p>
+        </div>
+        <div class="video-wrapper">
+          <div class="video-placeholder">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="12" fill="#3ce78c" opacity="0.12"/>
+              <polygon points="10,8 16,12 10,16" fill="#3ce78c"/>
+            </svg>
+            <p>Vídeo em breve</p>
+          </div>
+          <!-- Substitua o placeholder acima pelo iframe quando o vídeo estiver pronto:
+          <iframe src="URL_DO_VIDEO" title="Como pegar o ID do Telegram" frameborder="0" allowfullscreen></iframe>
+          -->
+        </div>
+      </div>
+
+      <div class="topic-panel" id="topic-telegram-bot" style="display:none">
+        <div class="topic-header">
+          <span class="topic-tag">Telegram</span>
+          <h1 class="topic-title">Como iniciar o bot do Telegram</h1>
+          <p class="topic-desc">Após obter seu ID, você precisa ativar o bot para começar a receber notificações. É só mandar um único comando — o vídeo mostra exatamente o que fazer.</p>
+        </div>
+        <div class="video-wrapper">
+          <div class="video-placeholder">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="12" fill="#3ce78c" opacity="0.12"/>
+              <polygon points="10,8 16,12 10,16" fill="#3ce78c"/>
+            </svg>
+            <p>Vídeo em breve</p>
+          </div>
+          <!-- Substitua pelo iframe quando o vídeo estiver pronto:
+          <iframe src="URL_DO_VIDEO" title="Como iniciar o bot do Telegram" frameborder="0" allowfullscreen></iframe>
+          -->
+        </div>
+      </div>
+
+      <div class="topic-panel" id="topic-bm-acesso" style="display:none">
+        <div class="topic-header">
+          <span class="topic-tag">Facebook / Meta</span>
+          <h1 class="topic-title">Compartilhamento de acesso (Facebook/BM)</h1>
+          <p class="topic-desc">Para que a gente possa gerenciar suas campanhas, você precisa nos dar acesso ao seu Business Manager. O processo leva menos de 2 minutos — assista ao vídeo e depois acesse o link abaixo para concluir.</p>
+        </div>
+        <div class="video-wrapper">
+          <video controls preload="metadata">
+            <source src="public/compartilhamento de conta.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+        </div>
+        <a class="topic-link" href="https://adsmanager.facebook.com/adsmanager" target="_blank" rel="noopener noreferrer">
+          <span class="topic-link-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </span>
+          Abrir o Gerenciador de Anúncios
+        </a>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    function showTopic(btn) {
+      document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.topic-panel').forEach(el => el.style.display = 'none');
+      document.getElementById('empty-state').style.display = 'none';
+
+      btn.classList.add('active');
+      const panel = document.getElementById('topic-' + btn.dataset.topic);
+      if (panel) panel.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
