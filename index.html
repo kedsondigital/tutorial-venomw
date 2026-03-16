@@ -21,6 +21,12 @@
       </div>
       <p class="sidebar-label">Tutoriais</p>
       <nav class="sidebar-nav">
+        <button class="nav-item" data-topic="bm-acesso" onclick="showTopic(this)">
+          <span class="nav-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-5"/></svg>
+          </span>
+          Compartilhamento de acesso
+        </button>
         <div class="nav-item nav-item--soon">
           <span class="nav-icon">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
@@ -30,30 +36,32 @@
             <span class="soon-badge">Em breve</span>
           </span>
         </div>
-        <button class="nav-item" data-topic="bm-acesso" onclick="showTopic(this)">
-          <span class="nav-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-5"/></svg>
-          </span>
-          Compartilhamento de acesso
-        </button>
       </nav>
     </aside>
 
     <!-- Content -->
     <main class="content">
 
-      <!-- Empty state -->
-      <div class="empty-state" id="empty-state">
-        <div class="empty-icon">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3ce78c" stroke-width="1.5">
-            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="9" y1="13" x2="15" y2="13"/>
-            <line x1="9" y1="17" x2="12" y2="17"/>
-          </svg>
+      <!-- Welcome state -->
+      <div class="welcome-state" id="empty-state">
+        <div class="welcome-tag">Central de Tutoriais</div>
+        <h1 class="welcome-title">Bem-vindo à área de tutoriais</h1>
+        <p class="welcome-desc">Esta página foi criada para guiar nossos clientes nos procedimentos necessários para configurar e integrar os serviços contratados. Aqui você encontra vídeos curtos e objetivos para cada etapa — sem enrolação.</p>
+        <p class="welcome-desc">Selecione um tópico no menu ao lado para começar.</p>
+        <div class="welcome-steps">
+          <div class="welcome-step">
+            <span class="step-dot"></span>
+            Assista ao vídeo do tópico correspondente
+          </div>
+          <div class="welcome-step">
+            <span class="step-dot"></span>
+            Siga as instruções exibidas na tela
+          </div>
+          <div class="welcome-step">
+            <span class="step-dot"></span>
+            Pronto — nos avise quando concluir
+          </div>
         </div>
-        <h2 class="empty-title">Selecione um tutorial</h2>
-        <p class="empty-desc">Escolha um tópico no menu ao lado para começar.</p>
       </div>
 
       <!-- Topic panels -->

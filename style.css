@@ -160,30 +160,66 @@ html, body {
   padding: 48px 56px;
 }
 
-/* Empty state */
-.empty-state {
-  height: 100%;
+/* Welcome state */
+.welcome-state {
+  max-width: 580px;
+  padding-top: 8px;
+}
+
+.welcome-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--green);
+  background: var(--green-dim);
+  border: 1px solid var(--green-border);
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.welcome-title {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.welcome-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.welcome-steps {
+  margin-top: 32px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 12px;
-  text-align: center;
-  opacity: 0.5;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 
-.empty-icon {
-  margin-bottom: 4px;
-}
-
-.empty-title {
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.empty-desc {
+.welcome-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 14px;
   color: var(--text-muted);
+}
+
+.step-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
 }
 
 /* Topic panel */
