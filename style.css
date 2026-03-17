@@ -387,9 +387,13 @@ html, body {
 /* Mobile */
 @media (max-width: 640px) {
   .layout { flex-direction: column; height: auto; overflow: auto; }
-  .sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 16px; }
-  .sidebar-logo { margin-bottom: 16px; }
+  .sidebar { order: 2; width: 100%; border-right: none; border-top: 1px solid var(--border); border-bottom: none; padding: 16px; }
+  .sidebar-logo { display: none; }
+  .sidebar-label { display: none; }
   .sidebar-nav { flex-direction: row; flex-wrap: wrap; gap: 6px; }
+  .nav-group { width: 100%; }
+  .nav-group-header { font-size: 11px; padding: 6px 8px; margin-top: 0; }
+  .nav-group-items { flex-direction: row; flex-wrap: wrap; padding-left: 0; gap: 4px; }
   .nav-item { width: auto; font-size: 13px; padding: 7px 10px; }
-  .content { padding: 24px 20px; overflow-y: visible; }
+  .content { order: 1; padding: 24px 20px; overflow-y: visible; }
 }
