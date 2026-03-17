@@ -21,21 +21,55 @@
       </div>
       <p class="sidebar-label">Tutoriais</p>
       <nav class="sidebar-nav">
-        <button class="nav-item" data-topic="bm-acesso" onclick="showTopic(this)">
-          <span class="nav-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-5"/></svg>
-          </span>
-          Compartilhamento de acesso
-        </button>
-        <div class="nav-item nav-item--soon">
-          <span class="nav-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </span>
-          <span class="nav-soon-text">
-            Tutoriais do Telegram
-            <span class="soon-badge">Em breve</span>
-          </span>
+
+        <!-- Facebook group -->
+        <div class="nav-group">
+          <button class="nav-group-header" onclick="toggleGroup(this)">
+            <span class="nav-group-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.313 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            </span>
+            <span class="nav-group-label">Facebook</span>
+            <span class="nav-group-chevron">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="nav-group-items open">
+            <button class="nav-item" data-topic="bm-acesso" onclick="showTopic(this)">
+              <span class="nav-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              Compartilhamento de acesso
+            </button>
+          </div>
         </div>
+
+        <!-- Telegram group -->
+        <div class="nav-group">
+          <button class="nav-group-header" onclick="toggleGroup(this)">
+            <span class="nav-group-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.48 13.99l-2.95-.924c-.64-.203-.658-.64.136-.954l11.566-4.458c.537-.194 1.006.131.662.567z"/></svg>
+            </span>
+            <span class="nav-group-label">Telegram</span>
+            <span class="nav-group-chevron">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="nav-group-items open">
+            <button class="nav-item" data-topic="telegram-bot" onclick="showTopic(this)">
+              <span class="nav-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              Acessando o bot
+            </button>
+            <button class="nav-item" data-topic="telegram-id" onclick="showTopic(this)">
+              <span class="nav-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </span>
+              Pegando o ID
+            </button>
+          </div>
+        </div>
+
       </nav>
     </aside>
 
@@ -64,47 +98,7 @@
         </div>
       </div>
 
-      <!-- Topic panels -->
-      <div class="topic-panel" id="topic-telegram-id" style="display:none">
-        <div class="topic-header">
-          <span class="topic-tag">Telegram</span>
-          <h1 class="topic-title">Como pegar o ID do Telegram</h1>
-          <p class="topic-desc">Seu ID do Telegram é um número único necessário para vincular sua conta ao sistema. Siga o vídeo abaixo e copie o número informado.</p>
-        </div>
-        <div class="video-wrapper">
-          <div class="video-placeholder">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="12" fill="#3ce78c" opacity="0.12"/>
-              <polygon points="10,8 16,12 10,16" fill="#3ce78c"/>
-            </svg>
-            <p>Vídeo em breve</p>
-          </div>
-          <!-- Substitua o placeholder acima pelo iframe quando o vídeo estiver pronto:
-          <iframe src="URL_DO_VIDEO" title="Como pegar o ID do Telegram" frameborder="0" allowfullscreen></iframe>
-          -->
-        </div>
-      </div>
-
-      <div class="topic-panel" id="topic-telegram-bot" style="display:none">
-        <div class="topic-header">
-          <span class="topic-tag">Telegram</span>
-          <h1 class="topic-title">Como iniciar o bot do Telegram</h1>
-          <p class="topic-desc">Após obter seu ID, você precisa ativar o bot para começar a receber notificações. É só mandar um único comando, o vídeo mostra exatamente o que fazer.</p>
-        </div>
-        <div class="video-wrapper">
-          <div class="video-placeholder">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="12" fill="#3ce78c" opacity="0.12"/>
-              <polygon points="10,8 16,12 10,16" fill="#3ce78c"/>
-            </svg>
-            <p>Vídeo em breve</p>
-          </div>
-          <!-- Substitua pelo iframe quando o vídeo estiver pronto:
-          <iframe src="URL_DO_VIDEO" title="Como iniciar o bot do Telegram" frameborder="0" allowfullscreen></iframe>
-          -->
-        </div>
-      </div>
-
+      <!-- Facebook: Compartilhamento de acesso -->
       <div class="topic-panel" id="topic-bm-acesso" style="display:none">
         <div class="topic-header">
           <span class="topic-tag">Facebook / Meta</span>
@@ -121,8 +115,38 @@
           <span class="topic-link-icon">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </span>
-          Abrir o Gerenciador de Anúncios
+          Abrir o Gerenciador de Anuncios
         </a>
+      </div>
+
+      <!-- Telegram: Acessando o bot -->
+      <div class="topic-panel" id="topic-telegram-bot" style="display:none">
+        <div class="topic-header">
+          <span class="topic-tag">Telegram</span>
+          <h1 class="topic-title">Acessando o bot do Telegram</h1>
+          <p class="topic-desc">Para receber notificações e interagir com o sistema, você precisa iniciar o bot no Telegram. O processo e rapido, basta seguir os passos mostrados no vídeo abaixo.</p>
+        </div>
+        <div class="video-wrapper">
+          <video controls preload="metadata">
+            <source src="public/Acessando o bot no telegram.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+        </div>
+      </div>
+
+      <!-- Telegram: Pegando o ID -->
+      <div class="topic-panel" id="topic-telegram-id" style="display:none">
+        <div class="topic-header">
+          <span class="topic-tag">Telegram</span>
+          <h1 class="topic-title">Pegando o ID do Telegram</h1>
+          <p class="topic-desc">O seu ID do Telegram e um numero unico necessario para vincular sua conta ao sistema. Siga o vídeo abaixo para localizar e copiar esse numero com facilidade.</p>
+        </div>
+        <div class="video-wrapper">
+          <video controls preload="metadata">
+            <source src="public/Pegando ID do telegram.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+        </div>
       </div>
 
     </main>
@@ -137,6 +161,13 @@
       btn.classList.add('active');
       const panel = document.getElementById('topic-' + btn.dataset.topic);
       if (panel) panel.style.display = 'block';
+    }
+
+    function toggleGroup(header) {
+      const items = header.nextElementSibling;
+      const chevron = header.querySelector('.nav-group-chevron');
+      items.classList.toggle('open');
+      chevron.classList.toggle('rotated');
     }
   </script>
 
